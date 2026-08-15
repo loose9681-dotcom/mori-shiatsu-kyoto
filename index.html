@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium In-Room Massage Kyoto | Licensed Shiatsu & Traditional Anma Therapy</title>
+    <meta name="description" content="Experience professional in-room massage in Kyoto. Licensed therapist Kotaro Mori provides authentic Shiatsu and Anma therapy directly to your hotel or ryokan.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Premium In-Room Massage Kyoto | Licensed Shiatsu & Traditional Anma Therapy">
+    <meta property="og:description" content="Professional in-room massage services in Kyoto. Authentic Japanese Shiatsu and Anma therapy by licensed practitioner Kotaro Mori.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    
+    <style>
+        :root {
+            --bg-color: #f2ebde;
+            --surface-color: #dfd8c8;
+            --text-color: #555;
+            --accent-color: #8a8a75;
+            --font-main: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            --enso-opacity: 0.15;
+            --enso-size: 80vh;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        /* Subtle Motion: Breathing Enso Background */
+        @keyframes breathe {
+            0% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.03) rotate(0.5deg); }
+            100% { transform: scale(1) rotate(0deg); }
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 10vh;
+            right: -10vw;
+            width: var(--enso-size);
+            height: var(--enso-size);
+            background-image: url('./images/enso.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: var(--enso-opacity);
+            z-index: -1;
+            pointer-events: none;
+            animation: breathe 20s ease-in-out infinite;
+        }
+        /* Subtle Motion: Soft Section Entrance */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        section { 
+            margin-bottom: 4em; 
+            animation: fadeIn 1.2s ease-out forwards;
+            opacity: 0;
+        }
+        main, header, footer {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1, h2 {
+            color: var(--accent-color);
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5em;
+        }
+        h1 { font-size: 2.2rem; border-bottom: 1px solid var(--surface-color); padding-bottom: 20px; }
+        h2 { font-size: 1.6rem; margin-top: 3em; }
+        ul, ol { padding-left: 20px; }
+        li { margin-bottom: 1em; }
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            margin: 2em 0;
+            -webkit-overflow-scrolling: touch;
+        }
+        table {
+            width: 100%;
+            min-width: 500px;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.3);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--surface-color);
+            transition: background 0.3s ease;
+        }
+        /* Hover feedback for table rows */
+        tbody tr:hover { background: rgba(255, 255, 255, 0.5); }
+        th { color: var(--accent-color); font-weight: bold; }
+        a { 
+            color: var(--accent-color); 
+            text-decoration: none; 
+            border-bottom: 1px solid var(--accent-color);
+            transition: opacity 0.3s ease, color 0.3s ease;
+        }
+        
+        /* Subtle interactive feedback */
+        a:hover, a:focus { opacity: 0.6; }
+        .practitioner-photo {
+            width: 200px;
+            height: 200px;
+            background: var(--surface-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2em auto;
+            border-radius: 50%;
+            color: white;
+            text-align: center;
+            font-size: 0.9rem;
+            transition: transform 0.5s ease;
+        }
+        
+        .practitioner-photo:hover { transform: scale(1.02); }
+        address ul { list-style: none; padding: 0; }
+        
+        /* Respect user preference for reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            body::before, section {
+                animation: none !important;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.4rem; }
+            section { margin-bottom: 2.5em; }
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 1.5rem; }
+            h2 { font-size: 1.25rem; }
+            main, header, footer { padding: 20px 15px; }
+            
+            body::before {
+                top: 5vh;
+                right: -30vw;
+                width: 60vw;
+                height: 60vw;
+                opacity: 0.1;
+            }
+            .practitioner-photo {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Mori Shiatsu Clinic (Kyoto Mobile Anma)",
+      "description": "Premium in-room massage services in Kyoto providing professional Shiatsu and Anma therapy.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3-1 Yamada Yotsunotsubo-cho",
+        "addressLocality": "Nishikyo-ku, Kyoto",
+        "postalCode": "615-8262",
+        "addressCountry": "JP"
+      },
+      "telephone": "+81-90-9887-0125",
+      "email": "tida.ceo.mori@gmail.com",
+      "provider": {
+        "@type": "Person",
+        "name": "Kotaro Mori",
+        "jobTitle": "Licensed Massage Therapist"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Kyoto"
+      }
+    }
+    </script>
+    <!-- FAQ Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is it allowed to book an external therapist?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, professional licensed therapists are generally welcome. As a licensed professional service, we respect hotel policies. We suggest informing the front desk that you have a private massage appointment for a smooth entry."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I book before I arrive in Japan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. We encourage advanced bookings via WhatsApp or Email to ensure your preferred time slot is secured during peak cherry blossom or autumn foliage seasons."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I pay?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We accept major Credit Cards (Visa/Mastercard), PayPal, and Cash (JPY). For your peace of mind, we can provide digital invoices for online payments."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+<header>
+    <h1>Premium In-Room Massage Kyoto | Licensed Shiatsu & Traditional Anma Therapy</h1>
+</header>
+<main>
+    <section id="introduction">
+        <p>Experience the ultimate recovery after exploring Kyoto. We provide high-end, <strong>licensed in-room massage services</strong> directly to your hotel or ryokan. Our mission is to restore your vitality through authentic Japanese healing traditions—leaving your mind and body as serene as the temples you visit.</p>
+    </section>
+    <section id="services-overview">
+        <h2>The Premier In-Room Massage for Kyoto Travelers</h2>
+        <p>Don't let the fatigue of exploring Fushimi Inari or Kiyomizu-dera interrupt your journey. Our <strong>private Shiatsu service</strong> brings tailored spa-grade therapy directly to the privacy of your guest room.</p>
+        <ul>
+            <li><strong>Restore Your Inner Zen:</strong> Authentic traditional Anma therapy thoughtfully curated for global travelers.</li>
+            <li><strong>The Kyoto Temple Fatigue Remedy:</strong> Targeted physical relief for the strain of walking 20,000+ steps along historic stone pathways.</li>
+            <li><strong>Effortless In-Room Luxury:</strong> No travel required. We arrive at major hotels throughout Kyoto City within 30–60 minutes.</li>
+        </ul>
+    </section>
+    <section id="therapy-details">
+        <h2>Traditional Anma & Shiatsu: Authentic Japanese Healing</h2>
+        <p>Our service specializes in <strong>Anma and Shiatsu</strong>, centuries-old Japanese manual therapies that focus on pressure points and energy flow to promote natural healing without the need for oils or special equipment.</p>
+        <ul>
+            <li><strong>Expert Relief for Travelers:</strong> Specifically designed to alleviate the physical strain of walking 20,000+ steps a day on Kyoto's stone-paved streets.</li>
+            <li><strong>Jet Lag Recovery:</strong> Our techniques improve circulation and nervous system balance, helping you sync with the local timezone quickly.</li>
+            <li><strong>Licensed Professionalism:</strong> All therapists are National License holders in Japan, ensuring the highest standards of safety and medical-grade technique.</li>
+        </ul>
+    </section>
+    <section id="practitioner">
+        <h2>Meet Your Licensed Practitioner: Kotaro Mori</h2>
+        <figure class="practitioner-photo">
+            [Portrait Photo of Kotaro Mori]
+        </figure>
+        <p>Entrust your well-being to a proven professional. I am <strong>Kotaro Mori</strong>, a government-licensed therapist with over a decade of dedicated clinical experience. I specialize in English-friendly, <strong>private in-room massage in Kyoto</strong> for discerning travelers who appreciate refined quality, discretion, and authentic technique.</p>
+    </section>
+    <section id="pricing">
+        <h2>Premium Pricing & Service Menu</h2>
+        <p>We offer transparent, all-inclusive pricing. No hidden fees or travel surcharges. Our premium rates reflect our commitment to excellence and high-level English communication.</p>
+        
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Treatment Course</th>
+                        <th>Duration</th>
+                        <th>Price (JPY)</th>
+                        <th>Ref. (USD)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Essential Renewal</strong><br><small>Focused relief for back, shoulders, or legs</small></td>
+                        <td>60 min</td>
+                        <td>¥18,000</td>
+                        <td>Approx. $120</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Deep Recovery & Rebalance</strong><br><small>Full-body restorative therapy</small></td>
+                        <td>90 min</td>
+                        <td>¥25,000</td>
+                        <td>Approx. $167</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ultimate Zen Harmony</strong><br><small>Complete head-to-toe revitalization</small></td>
+                        <td>120 min</td>
+                        <td>¥32,000</td>
+                        <td>Approx. $213</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <p>These prices reflect a premium, top-tier, and fully personalized in-room service. We prioritize quality and exclusive attention for your ultimate relaxation.</p>
+        <ul>
+            <li><em>All prices include travel fees and taxes. No tipping required.</em></li>
+        </ul>
+    </section>
+    <section id="booking-process">
+        <h2>How to Book Your Private Massage in Kyoto</h2>
+        <p>Booking from overseas or your hotel room is seamless. Most of our guests prefer using WhatsApp for instant confirmation.</p>
+        <ol>
+            <li><strong>Instant Contact:</strong> Send a WhatsApp message with your preferred time, hotel name, and room number.</li>
+            <li><strong>Seamless Confirmation:</strong> We verify therapist availability immediately and confirm your booking in English.</li>
+            <li><strong>Restorative Treatment:</strong> Your licensed practitioner arrives at your door. Relax in your hotel bathrobe, yukata, or casual attire and unwind.</li>
+        </ol>
+    </section>
+    <section id="faq">
+        <h2>FAQ: Everything You Need to Know About Kyoto Hotel Massages</h2>
+        <p>Frequently asked questions about our in-room service.</p>
+        <dl>
+            <dt><strong>Hotel Permission:</strong> Is it allowed to book an external therapist?</dt>
+            <dd>Yes, professional licensed therapists are generally welcome. As a <strong>licensed professional service</strong>, we respect hotel policies. We suggest informing the front desk that you have a private massage appointment for a smooth entry.</dd>
+            
+            <dt><strong>Booking from Overseas:</strong> Can I book before I arrive in Japan?</dt>
+            <dd>Absolutely. We encourage advanced bookings via WhatsApp or Email to ensure your preferred time slot is secured during peak cherry blossom or autumn foliage seasons.</dd>
+            
+            <dt><strong>Payment Security:</strong> How do I pay?</dt>
+            <dd>We accept major Credit Cards (Visa/Mastercard), PayPal, and Cash (JPY). For your peace of mind, we can provide digital invoices for online payments.</dd>
+        </dl>
+    </section>
+</main>
+<footer>
+    <section id="contact">
+        <h2>Contact Our Kyoto Professional Massage Team</h2>
+        <address>
+            <ul>
+                <li><strong>Business Name:</strong> Mori Shiatsu Clinic (Kyoto Mobile Anma)</li>
+                <li><strong>Practitioner:</strong> Kotaro Mori (Licensed Therapist)</li>
+                <li><strong>Phone:</strong> <a href="tel:+819098870125">090-9887-0125</a> / <a href="tel:+81759502348">(075) 950-2348</a></li>
+                <li><strong>Address:</strong> 3-1 Yamada Yotsunotsubo-cho, Nishikyo-ku, Kyoto 615-8262</li>
+                <li><strong>Email:</strong> <a href="mailto:tida.ceo.mori@gmail.com">tida.ceo.mori@gmail.com</a></li>
+                <li><strong>WhatsApp:</strong> <a href="https://wa.me/819098870125?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20an%20in-room%20massage%20in%20Kyoto.">Chat on WhatsApp</a></li>
+                <li><strong>Instagram:</strong> @kyoto_mobile_anma</li>
+            </ul>
+        </address>
+    </section>
+    <hr>
+    <p><em>最終更新日: Date</em></p>
+</footer>
+</body>
+</html>
+
