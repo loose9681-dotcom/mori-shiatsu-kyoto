@@ -34,6 +34,40 @@
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
+
+        /* Sticky Navigation */
+        header.sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(8px);
+            background-color: rgba(250, 248, 245, 0.85); /* 和紙トーンの生成り色 */
+            border-bottom: 1px solid rgba(62, 92, 68, 0.1);
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo { font-size: 1rem; font-weight: 300; color: var(--accent-color); letter-spacing: 0.05em; }
+        .nav-links a {
+            color: #333333;
+            text-decoration: none;
+            margin-right: 18px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+        .nav-links a:hover { opacity: 0.6; }
+        .nav-cta {
+            background-color: #3E5C44;
+            color: #FFFFFF !important;
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-bottom: none !important;
+        }
+
         /* Subtle Motion: Breathing Enso Background */
         @keyframes breathe {
             0% { transform: scale(1) rotate(0deg); }
@@ -65,18 +99,18 @@
             animation: fadeIn 1.2s ease-out forwards;
             opacity: 0;
         }
-        main, header, footer {
+        main, .hero, footer {
             max-width: 800px;
             margin: 0 auto;
             padding: 40px 20px;
         }
-        h1, h2 {
+        .hero h1, h2 {
             color: var(--accent-color);
             font-weight: 300;
             letter-spacing: 0.05em;
             margin-bottom: 1.5em;
         }
-        h1 { font-size: 2.2rem; border-bottom: 1px solid var(--surface-color); padding-bottom: 20px; }
+        .hero h1 { font-size: 2.2rem; border-bottom: 1px solid var(--surface-color); padding-bottom: 20px; }
         h2 { font-size: 1.6rem; margin-top: 3em; }
         ul, ol { padding-left: 20px; }
         li { margin-bottom: 1em; }
@@ -98,7 +132,6 @@
             border-bottom: 1px solid var(--surface-color);
             transition: background 0.3s ease;
         }
-        /* Hover feedback for table rows */
         tbody tr:hover { background: rgba(255, 255, 255, 0.5); }
         th { color: var(--accent-color); font-weight: bold; }
         a { 
@@ -107,8 +140,6 @@
             border-bottom: 1px solid var(--accent-color);
             transition: opacity 0.3s ease, color 0.3s ease;
         }
-        
-        /* Subtle interactive feedback */
         a:hover, a:focus { opacity: 0.6; }
         .practitioner-photo {
             width: 200px;
@@ -124,11 +155,9 @@
             font-size: 0.9rem;
             transition: transform 0.5s ease;
         }
-        
         .practitioner-photo:hover { transform: scale(1.02); }
         address ul { list-style: none; padding: 0; }
         
-        /* Respect user preference for reduced motion */
         @media (prefers-reduced-motion: reduce) {
             body::before, section {
                 animation: none !important;
@@ -137,15 +166,14 @@
             }
         }
         @media (max-width: 768px) {
-            h1 { font-size: 1.8rem; }
+            .hero h1 { font-size: 1.8rem; }
             h2 { font-size: 1.4rem; }
             section { margin-bottom: 2.5em; }
         }
         @media (max-width: 600px) {
-            h1 { font-size: 1.5rem; }
+            .hero h1 { font-size: 1.5rem; }
             h2 { font-size: 1.25rem; }
-            main, header, footer { padding: 20px 15px; }
-            
+            main, .hero, footer { padding: 20px 15px; }
             body::before {
                 top: 5vh;
                 right: -30vw;
@@ -153,13 +181,9 @@
                 height: 60vw;
                 opacity: 0.1;
             }
-            .practitioner-photo {
-                width: 150px;
-                height: 150px;
-            }
+            .practitioner-photo { width: 150px; height: 150px; }
         }
     </style>
-    <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -186,7 +210,6 @@
       }
     }
     </script>
-    <!-- FAQ Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -195,36 +218,38 @@
         {
           "@type": "Question",
           "name": "Is it allowed to book an external therapist?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, professional licensed therapists are generally welcome. As a licensed professional service, we respect hotel policies. We suggest informing the front desk that you have a private massage appointment for a smooth entry."
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, professional licensed therapists are generally welcome. As a licensed professional service, we respect hotel policies. We suggest informing the front desk that you have a private massage appointment for a smooth entry." }
         },
         {
           "@type": "Question",
           "name": "Can I book before I arrive in Japan?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolutely. We encourage advanced bookings via WhatsApp or Email to ensure your preferred time slot is secured during peak cherry blossom or autumn foliage seasons."
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. We encourage advanced bookings via WhatsApp or Email to ensure your preferred time slot is secured during peak cherry blossom or autumn foliage seasons." }
         },
         {
           "@type": "Question",
           "name": "How do I pay?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We accept major Credit Cards (Visa/Mastercard), PayPal, and Cash (JPY). For your peace of mind, we can provide digital invoices for online payments."
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": "We accept major Credit Cards (Visa/Mastercard), PayPal, and Cash (JPY). For your peace of mind, we can provide digital invoices for online payments." }
         }
       ]
     }
     </script>
 </head>
 <body>
-<header>
-    <h1>Premium In-Room Massage Kyoto | Licensed Shiatsu & Traditional Anma Therapy</h1>
+
+<header class="sticky-nav">
+    <div class="nav-logo">Mori Shiatsu</div>
+    <nav class="nav-links">
+        <a href="#services-overview">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact" class="nav-cta">Book Now</a>
+    </nav>
 </header>
+
 <main>
+    <div class="hero">
+        <h1>Premium In-Room Massage Kyoto | Licensed Shiatsu & Traditional Anma Therapy</h1>
+    </div>
+
     <section id="introduction">
         <p>Experience the ultimate recovery after exploring Kyoto. We provide high-end, <strong>licensed in-room massage services</strong> directly to your hotel or ryokan. Our mission is to restore your vitality through authentic Japanese healing traditions—leaving your mind and body as serene as the temples you visit.</p>
     </section>
