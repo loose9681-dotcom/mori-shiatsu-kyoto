@@ -164,25 +164,23 @@
                 transform: none !important;
             }
         }
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 1.8rem; }
-            h2 { font-size: 1.4rem; }
-            section { margin-bottom: 2.5em; }
-            body::before {
-                content: "";
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%); /* 画面のど真ん中に固定 */
-                width: 85vw; /* スマホ画面幅の85%サイズで中央配置 */
-                height: 85vw; /* 正方形を維持 */
-                background: url("./images/enso.png") center center / contain no-repeat;
-                opacity: 0.15; /* 存在感が出るよう少しだけ濃度アップ（0.12〜0.18で微調整可能） */
-                pointer-events: none;
-                z-index: 0;
-                animation: breathe 20s ease-in-out infinite;
-            }
-        }
+ /* 例: ファイル名が mori.png の場合 */
+@media (max-width: 768px) {
+    body::before {
+        content: "";
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 85vw;
+        height: 85vw;
+        background: url('./mori.png') center center / contain no-repeat; /* パスを統一 */
+        opacity: 0.15;
+        pointer-events: none;
+        z-index: 0;
+        animation: breathe 20s ease-in-out infinite;
+    }
+}      
         @media (max-width: 600px) {
             .hero h1 { font-size: 1.5rem; }
             h2 { font-size: 1.25rem; }
