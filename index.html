@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -169,18 +168,25 @@
             .hero h1 { font-size: 1.8rem; }
             h2 { font-size: 1.4rem; }
             section { margin-bottom: 2.5em; }
+            body::before {
+                content: "";
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%); /* 画面のど真ん中に固定 */
+                width: 85vw; /* スマホ画面幅の85%サイズで中央配置 */
+                height: 85vw; /* 正方形を維持 */
+                background: url("./images/enso.png") center center / contain no-repeat;
+                opacity: 0.15; /* 存在感が出るよう少しだけ濃度アップ（0.12〜0.18で微調整可能） */
+                pointer-events: none;
+                z-index: 0;
+                animation: breathe 20s ease-in-out infinite;
+            }
         }
         @media (max-width: 600px) {
             .hero h1 { font-size: 1.5rem; }
             h2 { font-size: 1.25rem; }
             main, .hero, footer { padding: 20px 15px; }
-            body::before {
-                top: 5vh;
-                right: -30vw;
-                width: 60vw;
-                height: 60vw;
-                opacity: 0.1;
-            }
             .practitioner-photo { width: 150px; height: 150px; }
         }
     </style>
@@ -218,7 +224,7 @@
         {
           "@type": "Question",
           "name": "Is it allowed to book an external therapist?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes, professional licensed therapists are generally welcome. As a licensed professional service, we respect hotel policies. We suggest informing the front desk that you have a private massage appointment for a smooth entry." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, professional licensed therapists are generally welcome. As a licensed professional service, we respect hotel policies. We suggest informing the front desk that you've arranged a private therapist visit." }
         },
         {
           "@type": "Question",
@@ -251,11 +257,11 @@
     </div>
 
     <section id="introduction">
-        <p>Experience the ultimate recovery after exploring Kyoto. We provide high-end, <strong>licensed in-room massage services</strong> directly to your hotel or ryokan. Our mission is to restore your vitality through authentic Japanese healing traditions—leaving your mind and body as serene as the temples you visit.</p>
+        <p>Experience the ultimate recovery after exploring Kyoto. We provide high-end, <strong>licensed in-room massage services</strong> directly to your hotel or ryokan. Our mission is to restore your wellbeing while you remain in the comfort of your accommodation.</p>
     </section>
     <section id="services-overview">
         <h2>The Premier In-Room Massage for Kyoto Travelers</h2>
-        <p>Don't let the fatigue of exploring Fushimi Inari or Kiyomizu-dera interrupt your journey. Our <strong>private Shiatsu service</strong> brings tailored spa-grade therapy directly to the privacy of your guest room.</p>
+        <p>Don't let the fatigue of exploring Fushimi Inari or Kiyomizu-dera interrupt your journey. Our <strong>private Shiatsu service</strong> brings tailored spa-grade therapy directly to the privacy of your hotel room or ryokan suite.</p>
         <ul>
             <li><strong>Restore Your Inner Zen:</strong> Authentic traditional Anma therapy thoughtfully curated for global travelers.</li>
             <li><strong>The Kyoto Temple Fatigue Remedy:</strong> Targeted physical relief for the strain of walking 20,000+ steps along historic stone pathways.</li>
@@ -264,7 +270,7 @@
     </section>
     <section id="therapy-details">
         <h2>Traditional Anma & Shiatsu: Authentic Japanese Healing</h2>
-        <p>Our service specializes in <strong>Anma and Shiatsu</strong>, centuries-old Japanese manual therapies that focus on pressure points and energy flow to promote natural healing without the need for oils or special equipment.</p>
+        <p>Our service specializes in <strong>Anma and Shiatsu</strong>, centuries-old Japanese manual therapies that focus on pressure points and energy flow to promote natural healing without the need for oils or machinery.</p>
         <ul>
             <li><strong>Expert Relief for Travelers:</strong> Specifically designed to alleviate the physical strain of walking 20,000+ steps a day on Kyoto's stone-paved streets.</li>
             <li><strong>Jet Lag Recovery:</strong> Our techniques improve circulation and nervous system balance, helping you sync with the local timezone quickly.</li>
@@ -276,7 +282,7 @@
         <figure class="practitioner-photo">
             [Portrait Photo of Kotaro Mori]
         </figure>
-        <p>Entrust your well-being to a proven professional. I am <strong>Kotaro Mori</strong>, a government-licensed therapist with over a decade of dedicated clinical experience. I specialize in English-friendly, <strong>private in-room massage in Kyoto</strong> for discerning travelers who appreciate refined quality, discretion, and authentic technique.</p>
+        <p>Entrust your well-being to a proven professional. I am <strong>Kotaro Mori</strong>, a government-licensed therapist with over a decade of dedicated clinical experience. I specialize in English-speaking therapy for international guests and adapt my techniques to address your specific needs—whether you're recovering from jet lag, temple-hopping fatigue, or seeking deep relaxation.</p>
     </section>
     <section id="pricing">
         <h2>Premium Pricing & Service Menu</h2>
@@ -334,7 +340,7 @@
         <p>Frequently asked questions about our in-room service.</p>
         <dl>
             <dt><strong>Hotel Permission:</strong> Is it allowed to book an external therapist?</dt>
-            <dd>Yes, professional licensed therapists are generally welcome. As a <strong>licensed professional service</strong>, we respect hotel policies. We suggest informing the front desk that you have a private massage appointment for a smooth entry.</dd>
+            <dd>Yes, professional licensed therapists are generally welcome. As a <strong>licensed professional service</strong>, we respect hotel policies. We suggest informing the front desk that you've arranged a private therapist visit.</dd>
             
             <dt><strong>Booking from Overseas:</strong> Can I book before I arrive in Japan?</dt>
             <dd>Absolutely. We encourage advanced bookings via WhatsApp or Email to ensure your preferred time slot is secured during peak cherry blossom or autumn foliage seasons.</dd>
@@ -364,4 +370,3 @@
 </footer>
 </body>
 </html>
-
